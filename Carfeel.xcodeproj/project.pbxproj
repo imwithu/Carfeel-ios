@@ -20,7 +20,6 @@
 		1A36E80B1727B386003DE0C9 /* CFFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A36E7FE1727B386003DE0C9 /* CFFriendListViewController.m */; };
 		1A36E80C1727B386003DE0C9 /* CFLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A36E8001727B386003DE0C9 /* CFLeftViewController.m */; };
 		1A36E80D1727B386003DE0C9 /* CFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A36E8021727B386003DE0C9 /* CFMainViewController.m */; };
-		1A36E80E1727B386003DE0C9 /* CFPersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A36E8041727B386003DE0C9 /* CFPersonalInfoViewController.m */; };
 		1A36E80F1727B386003DE0C9 /* CFRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A36E8061727B386003DE0C9 /* CFRightViewController.m */; };
 		1A36E8101727B386003DE0C9 /* CFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A36E8081727B386003DE0C9 /* CFRootViewController.m */; };
 		1A36E83B1727B396003DE0C9 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A36E8321727B396003DE0C9 /* libbaidumapapi.a */; };
@@ -42,6 +41,12 @@
 		1AC873CA172BB8C800330CBA /* CFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873C9172BB8C800330CBA /* CFUser.m */; };
 		1AC873CD172BBB4A00330CBA /* CFGuest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873CC172BBB4900330CBA /* CFGuest.m */; };
 		1AC873D0172BBBF600330CBA /* CFDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873CF172BBBF500330CBA /* CFDriver.m */; };
+		1AC873DB172C579000330CBA /* CFBaseInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873DA172C579000330CBA /* CFBaseInformationViewController.m */; };
+		1AC873DE172C59EF00330CBA /* CFContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873DD172C59EF00330CBA /* CFContactViewController.m */; };
+		1AC873E1172C5A4800330CBA /* CFIdentifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873E0172C5A4800330CBA /* CFIdentifierViewController.m */; };
+		1AC873E4172C5A8700330CBA /* CFVehicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873E3172C5A8700330CBA /* CFVehicleViewController.m */; };
+		1AC873E7172C794000330CBA /* CFNormalRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873E6172C793F00330CBA /* CFNormalRouterViewController.m */; };
+		1AC873EA172C797600330CBA /* CFTempRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873E9172C797600330CBA /* CFTempRouterViewController.m */; };
 		1AD434F51728DAEE00BA2BAC /* CFRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD434F41728DAEE00BA2BAC /* CFRouter.m */; };
 		1AD434F81728E54400BA2BAC /* CFFeedNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD434F71728E54300BA2BAC /* CFFeedNews.m */; };
 		1AD434FB1728F05D00BA2BAC /* CFChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD434FA1728F05D00BA2BAC /* CFChatMessage.m */; };
@@ -69,8 +74,6 @@
 		1A36E8001727B386003DE0C9 /* CFLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFLeftViewController.m; sourceTree = "<group>"; };
 		1A36E8011727B386003DE0C9 /* CFMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFMainViewController.h; sourceTree = "<group>"; };
 		1A36E8021727B386003DE0C9 /* CFMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFMainViewController.m; sourceTree = "<group>"; };
-		1A36E8031727B386003DE0C9 /* CFPersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFPersonalInfoViewController.h; sourceTree = "<group>"; };
-		1A36E8041727B386003DE0C9 /* CFPersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFPersonalInfoViewController.m; sourceTree = "<group>"; };
 		1A36E8061727B386003DE0C9 /* CFRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRightViewController.m; sourceTree = "<group>"; };
 		1A36E8071727B386003DE0C9 /* CFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRootViewController.h; sourceTree = "<group>"; };
 		1A36E8081727B386003DE0C9 /* CFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRootViewController.m; sourceTree = "<group>"; };
@@ -138,6 +141,18 @@
 		1AC873CE172BBBF500330CBA /* CFDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDriver.h; sourceTree = "<group>"; };
 		1AC873CF172BBBF500330CBA /* CFDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDriver.m; sourceTree = "<group>"; };
 		1AC873D2172C54AE00330CBA /* CFRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRightViewController.h; sourceTree = "<group>"; };
+		1AC873D9172C579000330CBA /* CFBaseInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFBaseInformationViewController.h; sourceTree = "<group>"; };
+		1AC873DA172C579000330CBA /* CFBaseInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFBaseInformationViewController.m; sourceTree = "<group>"; };
+		1AC873DC172C59EF00330CBA /* CFContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFContactViewController.h; sourceTree = "<group>"; };
+		1AC873DD172C59EF00330CBA /* CFContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFContactViewController.m; sourceTree = "<group>"; };
+		1AC873DF172C5A4800330CBA /* CFIdentifierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIdentifierViewController.h; sourceTree = "<group>"; };
+		1AC873E0172C5A4800330CBA /* CFIdentifierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIdentifierViewController.m; sourceTree = "<group>"; };
+		1AC873E2172C5A8700330CBA /* CFVehicleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFVehicleViewController.h; sourceTree = "<group>"; };
+		1AC873E3172C5A8700330CBA /* CFVehicleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFVehicleViewController.m; sourceTree = "<group>"; };
+		1AC873E5172C793F00330CBA /* CFNormalRouterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFNormalRouterViewController.h; sourceTree = "<group>"; };
+		1AC873E6172C793F00330CBA /* CFNormalRouterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFNormalRouterViewController.m; sourceTree = "<group>"; };
+		1AC873E8172C797500330CBA /* CFTempRouterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTempRouterViewController.h; sourceTree = "<group>"; };
+		1AC873E9172C797600330CBA /* CFTempRouterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFTempRouterViewController.m; sourceTree = "<group>"; };
 		1AD434F31728DAEE00BA2BAC /* CFRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRouter.h; sourceTree = "<group>"; };
 		1AD434F41728DAEE00BA2BAC /* CFRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRouter.m; sourceTree = "<group>"; };
 		1AD434F61728E54300BA2BAC /* CFFeedNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFFeedNews.h; sourceTree = "<group>"; };
@@ -224,18 +239,9 @@
 				1A36E7FA1727B386003DE0C9 /* Carfeel.storyboard */,
 				1A36E7FB1727B386003DE0C9 /* CFAppDelegate.h */,
 				1A36E7FC1727B386003DE0C9 /* CFAppDelegate.m */,
-				1A36E7FD1727B386003DE0C9 /* CFFriendListViewController.h */,
-				1A36E7FE1727B386003DE0C9 /* CFFriendListViewController.m */,
-				1A36E7FF1727B386003DE0C9 /* CFLeftViewController.h */,
-				1A36E8001727B386003DE0C9 /* CFLeftViewController.m */,
-				1A36E8011727B386003DE0C9 /* CFMainViewController.h */,
-				1A36E8021727B386003DE0C9 /* CFMainViewController.m */,
-				1A36E8031727B386003DE0C9 /* CFPersonalInfoViewController.h */,
-				1A36E8041727B386003DE0C9 /* CFPersonalInfoViewController.m */,
-				1AC873D2172C54AE00330CBA /* CFRightViewController.h */,
-				1A36E8061727B386003DE0C9 /* CFRightViewController.m */,
-				1A36E8071727B386003DE0C9 /* CFRootViewController.h */,
-				1A36E8081727B386003DE0C9 /* CFRootViewController.m */,
+				1AC873D7172C566200330CBA /* CenterView */,
+				1AC873D6172C561700330CBA /* LeftMenu */,
+				1AC873D8172C56A700330CBA /* RightMenu */,
 			);
 			name = Source;
 			path = src;
@@ -359,6 +365,49 @@
 			path = CFlibrary;
 			sourceTree = "<group>";
 		};
+		1AC873D6172C561700330CBA /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1A36E7FF1727B386003DE0C9 /* CFLeftViewController.h */,
+				1A36E8001727B386003DE0C9 /* CFLeftViewController.m */,
+				1A36E7FD1727B386003DE0C9 /* CFFriendListViewController.h */,
+				1A36E7FE1727B386003DE0C9 /* CFFriendListViewController.m */,
+				1AC873D9172C579000330CBA /* CFBaseInformationViewController.h */,
+				1AC873DA172C579000330CBA /* CFBaseInformationViewController.m */,
+				1AC873DC172C59EF00330CBA /* CFContactViewController.h */,
+				1AC873DD172C59EF00330CBA /* CFContactViewController.m */,
+				1AC873DF172C5A4800330CBA /* CFIdentifierViewController.h */,
+				1AC873E0172C5A4800330CBA /* CFIdentifierViewController.m */,
+				1AC873E2172C5A8700330CBA /* CFVehicleViewController.h */,
+				1AC873E3172C5A8700330CBA /* CFVehicleViewController.m */,
+				1AC873E5172C793F00330CBA /* CFNormalRouterViewController.h */,
+				1AC873E6172C793F00330CBA /* CFNormalRouterViewController.m */,
+				1AC873E8172C797500330CBA /* CFTempRouterViewController.h */,
+				1AC873E9172C797600330CBA /* CFTempRouterViewController.m */,
+			);
+			name = LeftMenu;
+			sourceTree = "<group>";
+		};
+		1AC873D7172C566200330CBA /* CenterView */ = {
+			isa = PBXGroup;
+			children = (
+				1A36E8071727B386003DE0C9 /* CFRootViewController.h */,
+				1A36E8081727B386003DE0C9 /* CFRootViewController.m */,
+				1A36E8011727B386003DE0C9 /* CFMainViewController.h */,
+				1A36E8021727B386003DE0C9 /* CFMainViewController.m */,
+			);
+			name = CenterView;
+			sourceTree = "<group>";
+		};
+		1AC873D8172C56A700330CBA /* RightMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1AC873D2172C54AE00330CBA /* CFRightViewController.h */,
+				1A36E8061727B386003DE0C9 /* CFRightViewController.m */,
+			);
+			name = RightMenu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -432,7 +481,6 @@
 				1A36E80B1727B386003DE0C9 /* CFFriendListViewController.m in Sources */,
 				1A36E80C1727B386003DE0C9 /* CFLeftViewController.m in Sources */,
 				1A36E80D1727B386003DE0C9 /* CFMainViewController.m in Sources */,
-				1A36E80E1727B386003DE0C9 /* CFPersonalInfoViewController.m in Sources */,
 				1A36E80F1727B386003DE0C9 /* CFRightViewController.m in Sources */,
 				1A36E8101727B386003DE0C9 /* CFRootViewController.m in Sources */,
 				1A36E83D1727B396003DE0C9 /* IISideController.m in Sources */,
@@ -454,6 +502,12 @@
 				1AC873CA172BB8C800330CBA /* CFUser.m in Sources */,
 				1AC873CD172BBB4A00330CBA /* CFGuest.m in Sources */,
 				1AC873D0172BBBF600330CBA /* CFDriver.m in Sources */,
+				1AC873DB172C579000330CBA /* CFBaseInformationViewController.m in Sources */,
+				1AC873DE172C59EF00330CBA /* CFContactViewController.m in Sources */,
+				1AC873E1172C5A4800330CBA /* CFIdentifierViewController.m in Sources */,
+				1AC873E4172C5A8700330CBA /* CFVehicleViewController.m in Sources */,
+				1AC873E7172C794000330CBA /* CFNormalRouterViewController.m in Sources */,
+				1AC873EA172C797600330CBA /* CFTempRouterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

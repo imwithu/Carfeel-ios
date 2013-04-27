@@ -1,19 +1,19 @@
 //
-//  CFContactViewController.m
+//  CFNormalRouterViewController.m
 //  Carfeel
 //
 //  Created by James Yu on 4/27/13.
 //  Copyright (c) 2013 Jianqiang Yu. All rights reserved.
 //
 
-#import "CFContactViewController.h"
+#import "CFNormalRouterViewController.h"
 #import "IIViewDeckController.h"
 
-@interface CFContactViewController ()
+@interface CFNormalRouterViewController ()
 
 @end
 
-@implementation CFContactViewController
+@implementation CFNormalRouterViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

@@ -8,7 +8,6 @@
 
 #import "CFLeftViewController.h"
 #import "IIViewDeckController.h"
-#import "CFPersonalInfoViewController.h"
 
 @interface CFLeftViewController () <IIViewDeckControllerDelegate>
 
@@ -258,10 +257,11 @@
 {
     switch (indexPath.section) {
         case 0:
+        {
             [tableView deselectRowAtIndexPath:indexPath animated:YES];
-            [self.viewDeckController toggleLeftViewAnimated:YES];
             self.viewDeckController.centerController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
-
+            [self.viewDeckController toggleLeftViewAnimated:YES];
+        }
             break;
         case 1:
             break;
@@ -305,6 +305,7 @@
                 default:
                     break;
             }
+            [self.viewDeckController toggleLeftViewAnimated:YES];
         }
             break;
         default:

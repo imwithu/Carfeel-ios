@@ -156,7 +156,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3r-qn-kk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2157" y="1716"/>
+            <point key="canvasLocation" x="-2141" y="4332"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="XvH-rO-fde">
@@ -330,10 +330,10 @@
             </objects>
             <point key="canvasLocation" x="-863" y="-351"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Base Information View Controller - 账户信息-->
         <scene sceneID="hVE-bc-cU1">
             <objects>
-                <tableViewController id="uED-dT-8ub" sceneMemberID="viewController">
+                <tableViewController id="uED-dT-8ub" customClass="CFBaseInformationViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BW4-qk-PgR">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -350,16 +350,16 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="nUE-Uy-S0K"/>
+                    <navigationItem key="navigationItem" title="账户信息" id="nUE-Uy-S0K"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0n-B8-qUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-863" y="237"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Contact View Controller - 联系信息-->
         <scene sceneID="VOs-ky-ddE">
             <objects>
-                <tableViewController id="Zd2-do-qNn" sceneMemberID="viewController">
+                <tableViewController id="Zd2-do-qNn" customClass="CFContactViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RLh-pe-r3t">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -376,16 +376,16 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="iat-f1-fGd"/>
+                    <navigationItem key="navigationItem" title="联系信息" id="iat-f1-fGd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYf-bI-sAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-863" y="847"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Identifier View Controller - 身份信息-->
         <scene sceneID="BGP-BJ-XWE">
             <objects>
-                <tableViewController id="p02-x4-kwE" sceneMemberID="viewController">
+                <tableViewController id="p02-x4-kwE" customClass="CFIdentifierViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tjb-jL-i9v">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -402,16 +402,16 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="VYR-8A-VG2"/>
+                    <navigationItem key="navigationItem" title="身份信息" id="VYR-8A-VG2"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbQ-Ez-Ayo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-863" y="1449"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Vehicle View Controller - 车辆信息-->
         <scene sceneID="q9C-7j-67I">
             <objects>
-                <tableViewController id="b8L-l8-ojQ" sceneMemberID="viewController">
+                <tableViewController id="b8L-l8-ojQ" customClass="CFVehicleViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8jr-bC-XCg">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -428,13 +428,13 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Zfz-gk-g5u"/>
+                    <navigationItem key="navigationItem" title="车辆信息" id="Zfz-gk-g5u"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kxg-gC-Wta" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-858" y="2041"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Table View Controller - 日常路线-->
         <scene sceneID="i8a-6U-UjP">
             <objects>
                 <tableViewController id="2i2-rp-xMU" sceneMemberID="viewController">
@@ -454,7 +454,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="TVG-Dt-bYP"/>
+                    <navigationItem key="navigationItem" title="日常路线" id="TVG-Dt-bYP"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YoR-0d-2jJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -475,10 +475,10 @@
             </objects>
             <point key="canvasLocation" x="-1284" y="2643"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Base Information View Controller - 临时路线-->
         <scene sceneID="jM3-uk-MSB">
             <objects>
-                <tableViewController id="Jyd-nw-AK3" sceneMemberID="viewController">
+                <tableViewController id="Jyd-nw-AK3" customClass="CFBaseInformationViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WoV-1T-wW1">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -495,7 +495,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Phz-2V-TcB"/>
+                    <navigationItem key="navigationItem" title="临时路线" id="Phz-2V-TcB"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a61-xm-cpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -676,35 +676,6 @@
             <point key="canvasLocation" x="-1285" y="-346"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CFFriendListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CFFriendListViewController.h"/>
-        </class>
-        <class className="CFLeftViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CFLeftViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="driverSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="muteSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-        <class className="CFMainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CFMainViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="switchView:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="switchLeft" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="switchRight" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="CFRightViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CFRightViewController.h"/>
-        </class>
-        <class className="CFRootViewController" superclassName="IIViewDeckController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CFRootViewController.h"/>
-        </class>
-        <class className="IIViewDeckController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IIViewDeckController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

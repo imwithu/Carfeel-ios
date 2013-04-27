@@ -7,6 +7,7 @@
 //
 
 #import "CFVehicleViewController.h"
+#import "IIViewDeckController.h"
 
 @interface CFVehicleViewController ()
 
@@ -28,10 +29,12 @@
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self.viewDeckController action:@selector(toggleLeftView)];
+
 }
 
 - (void)didReceiveMemoryWarning
