@@ -9,18 +9,6 @@
 #import "CFRoutePoint.h"
 
 
-@interface CFRoutePoint ()
-
-@property (strong, nonatomic, readwrite) NSString *name;
-@property (strong, nonatomic, readwrite) NSString *description;
-@property (strong, nonatomic, readwrite) NSURL *reference;
-@property (strong, nonatomic, readwrite) NSDate *crossTime;
-@property (strong, nonatomic, readwrite) CLLocation *location;
-
-
-@end
-
-
 @implementation CFRoutePoint
 
 @synthesize name = _name;
