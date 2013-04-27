@@ -1,18 +1,18 @@
 //
-//  CFPersonalInfoViewController.m
-//  TestSideMenu2
+//  CFContactViewController.m
+//  Carfeel
 //
-//  Created by James Yu on 4/22/13.
+//  Created by James Yu on 4/27/13.
 //  Copyright (c) 2013 Jianqiang Yu. All rights reserved.
 //
 
-#import "CFPersonalInfoViewController.h"
+#import "CFContactViewController.h"
 
-@interface CFPersonalInfoViewController ()
+@interface CFContactViewController ()
 
 @end
 
-@implementation CFPersonalInfoViewController
+@implementation CFContactViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -44,12 +44,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 0;
 }
