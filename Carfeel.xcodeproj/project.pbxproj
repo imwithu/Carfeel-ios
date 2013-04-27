@@ -36,6 +36,12 @@
 		1AC873B8172BAC1A00330CBA /* CFAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873B7172BAC1A00330CBA /* CFAddress.m */; };
 		1AC873BB172BACFB00330CBA /* CFContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873BA172BACFB00330CBA /* CFContact.m */; };
 		1AC873BE172BADE000330CBA /* CFBaseInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873BD172BADE000330CBA /* CFBaseInformation.m */; };
+		1AC873C1172BB1B000330CBA /* CFIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873C0172BB1B000330CBA /* CFIdentifier.m */; };
+		1AC873C4172BB4B300330CBA /* CFDriveLicense.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873C3172BB4B300330CBA /* CFDriveLicense.m */; };
+		1AC873C7172BB61800330CBA /* CFVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873C6172BB61800330CBA /* CFVehicle.m */; };
+		1AC873CA172BB8C800330CBA /* CFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873C9172BB8C800330CBA /* CFUser.m */; };
+		1AC873CD172BBB4A00330CBA /* CFGuest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873CC172BBB4900330CBA /* CFGuest.m */; };
+		1AC873D0172BBBF600330CBA /* CFDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873CF172BBBF500330CBA /* CFDriver.m */; };
 		1AD434F51728DAEE00BA2BAC /* CFRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD434F41728DAEE00BA2BAC /* CFRouter.m */; };
 		1AD434F81728E54400BA2BAC /* CFFeedNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD434F71728E54300BA2BAC /* CFFeedNews.m */; };
 		1AD434FB1728F05D00BA2BAC /* CFChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD434FA1728F05D00BA2BAC /* CFChatMessage.m */; };
@@ -120,6 +126,18 @@
 		1AC873BA172BACFB00330CBA /* CFContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFContact.m; sourceTree = "<group>"; };
 		1AC873BC172BADE000330CBA /* CFBaseInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFBaseInformation.h; sourceTree = "<group>"; };
 		1AC873BD172BADE000330CBA /* CFBaseInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFBaseInformation.m; sourceTree = "<group>"; };
+		1AC873BF172BB1B000330CBA /* CFIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIdentifier.h; sourceTree = "<group>"; };
+		1AC873C0172BB1B000330CBA /* CFIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIdentifier.m; sourceTree = "<group>"; };
+		1AC873C2172BB4B300330CBA /* CFDriveLicense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDriveLicense.h; sourceTree = "<group>"; };
+		1AC873C3172BB4B300330CBA /* CFDriveLicense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDriveLicense.m; sourceTree = "<group>"; };
+		1AC873C5172BB61800330CBA /* CFVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFVehicle.h; sourceTree = "<group>"; };
+		1AC873C6172BB61800330CBA /* CFVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFVehicle.m; sourceTree = "<group>"; };
+		1AC873C8172BB8C800330CBA /* CFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFUser.h; sourceTree = "<group>"; };
+		1AC873C9172BB8C800330CBA /* CFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFUser.m; sourceTree = "<group>"; };
+		1AC873CB172BBB4900330CBA /* CFGuest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFGuest.h; sourceTree = "<group>"; };
+		1AC873CC172BBB4900330CBA /* CFGuest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFGuest.m; sourceTree = "<group>"; };
+		1AC873CE172BBBF500330CBA /* CFDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDriver.h; sourceTree = "<group>"; };
+		1AC873CF172BBBF500330CBA /* CFDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDriver.m; sourceTree = "<group>"; };
 		1AD434F31728DAEE00BA2BAC /* CFRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRouter.h; sourceTree = "<group>"; };
 		1AD434F41728DAEE00BA2BAC /* CFRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRouter.m; sourceTree = "<group>"; };
 		1AD434F61728E54300BA2BAC /* CFFeedNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFFeedNews.h; sourceTree = "<group>"; };
@@ -325,6 +343,18 @@
 				1AC873BA172BACFB00330CBA /* CFContact.m */,
 				1AC873BC172BADE000330CBA /* CFBaseInformation.h */,
 				1AC873BD172BADE000330CBA /* CFBaseInformation.m */,
+				1AC873BF172BB1B000330CBA /* CFIdentifier.h */,
+				1AC873C0172BB1B000330CBA /* CFIdentifier.m */,
+				1AC873C2172BB4B300330CBA /* CFDriveLicense.h */,
+				1AC873C3172BB4B300330CBA /* CFDriveLicense.m */,
+				1AC873C5172BB61800330CBA /* CFVehicle.h */,
+				1AC873C6172BB61800330CBA /* CFVehicle.m */,
+				1AC873C8172BB8C800330CBA /* CFUser.h */,
+				1AC873C9172BB8C800330CBA /* CFUser.m */,
+				1AC873CB172BBB4900330CBA /* CFGuest.h */,
+				1AC873CC172BBB4900330CBA /* CFGuest.m */,
+				1AC873CE172BBBF500330CBA /* CFDriver.h */,
+				1AC873CF172BBBF500330CBA /* CFDriver.m */,
 			);
 			path = CFlibrary;
 			sourceTree = "<group>";
@@ -418,6 +448,12 @@
 				1AC873B8172BAC1A00330CBA /* CFAddress.m in Sources */,
 				1AC873BB172BACFB00330CBA /* CFContact.m in Sources */,
 				1AC873BE172BADE000330CBA /* CFBaseInformation.m in Sources */,
+				1AC873C1172BB1B000330CBA /* CFIdentifier.m in Sources */,
+				1AC873C4172BB4B300330CBA /* CFDriveLicense.m in Sources */,
+				1AC873C7172BB61800330CBA /* CFVehicle.m in Sources */,
+				1AC873CA172BB8C800330CBA /* CFUser.m in Sources */,
+				1AC873CD172BBB4A00330CBA /* CFGuest.m in Sources */,
+				1AC873D0172BBBF600330CBA /* CFDriver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

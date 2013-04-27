@@ -11,11 +11,11 @@
 
 @interface CFRoutePoint : NSObject
 
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *description;
-@property (strong, nonatomic) NSURL *reference;
-@property (strong, nonatomic) NSDate *crossTime;
-@property (strong, nonatomic) CLLocation *location;
+@property (strong, nonatomic, readonly) NSString *name;
+@property (strong, nonatomic, readonly) NSString *description;
+@property (strong, nonatomic, readonly) NSURL *reference;
+@property (strong, nonatomic, readonly) NSDate *crossTime;
+@property (strong, nonatomic, readonly) CLLocation *location;
 
 
 @end

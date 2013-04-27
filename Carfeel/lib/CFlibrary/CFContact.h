@@ -13,8 +13,8 @@
 
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *phone;
-@property (nonatomic) BOOL emailVilidated;
-@property (nonatomic) BOOL phoneVilidated;
+@property (nonatomic, getter = isEmailVilidated) BOOL emailVilidated;
+@property (nonatomic, getter = isPhoneVilidated) BOOL phoneVilidated;
 
 @property (nonatomic, strong) CFAddress *homeAddress;
 @property (nonatomic, strong) CFAddress *compAddress;

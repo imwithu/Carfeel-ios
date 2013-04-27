@@ -8,6 +8,19 @@
 
 #import "CFBaseInformation.h"
 
+@interface CFBaseInformation ()
+
+@property (nonatomic, strong, readwrite) NSString *userName;
+@property (nonatomic, strong, readwrite) NSString *saltedPassword;
+@property (nonatomic, strong, readwrite) NSString *displayName;
+@property (nonatomic, strong, readwrite) UIImage *displayPicture;
+@property (nonatomic, strong, readwrite) NSDate *creationDate;
+@property (nonatomic, strong, readwrite) NSDate *modificationDate;
+
+
+@end
+
 @implementation CFBaseInformation
+
 
 @end
