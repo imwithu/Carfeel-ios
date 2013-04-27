@@ -7,6 +7,7 @@
 //
 
 #import "CFRightViewController.h"
+#import "CFReportViewController.h"
 #import "IIViewDeckController.h"
 
 @interface CFRightViewController () <IIViewDeckControllerDelegate>
@@ -55,7 +56,7 @@
     return 7;
 }
 
-- (void)createReportButton:(UITableViewCell *)cell
+- (void)createReportButton:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     CGRect btnRect = cell.frame;
     btnRect.origin.x += 100.f;
@@ -67,12 +68,21 @@
     [btn setTitle:@"查看" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [cell addSubview:btn];
+    
     btnRect.origin.x += 80;
     btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     btn.frame = btnRect;
     [btn setTitle:@"报告" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(popOutReportView:) forControlEvents:UIControlEventTouchUpInside];
     [cell addSubview:btn];
+}
+
+- (IBAction)popOutReportView:(UIButton *)button
+{
+    //self.viewDeckController.centerController = [[CFReportViewController alloc] init];
+    self.viewDeckController.centerController = [self.storyboard instantiateViewControllerWithIdentifier:@"ReportViewController"];
+    [self.viewDeckController toggleRightViewAnimated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -89,7 +99,7 @@
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textLabel.textColor = [UIColor whiteColor];
-        [self createReportButton:cell];
+        [self createReportButton:cell atIndexPath:indexPath];
         if (indexPath.section == 0) {
             switch (indexPath.row) {
                 case 0:
@@ -190,6 +200,18 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    if (indexPath.section != 0) {  // 只有一个section
+        return;
+    }
+    
+    switch (indexPath.row) {
+        case 0:
+            
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end

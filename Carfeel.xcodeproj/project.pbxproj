@@ -47,6 +47,7 @@
 		1AC873E4172C5A8700330CBA /* CFVehicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873E3172C5A8700330CBA /* CFVehicleViewController.m */; };
 		1AC873E7172C794000330CBA /* CFNormalRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873E6172C793F00330CBA /* CFNormalRouterViewController.m */; };
 		1AC873EA172C797600330CBA /* CFTempRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873E9172C797600330CBA /* CFTempRouterViewController.m */; };
+		1AC873ED172C7BE500330CBA /* CFReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873EC172C7BE500330CBA /* CFReportViewController.m */; };
 		1AD434F51728DAEE00BA2BAC /* CFRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD434F41728DAEE00BA2BAC /* CFRouter.m */; };
 		1AD434F81728E54400BA2BAC /* CFFeedNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD434F71728E54300BA2BAC /* CFFeedNews.m */; };
 		1AD434FB1728F05D00BA2BAC /* CFChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD434FA1728F05D00BA2BAC /* CFChatMessage.m */; };
@@ -153,6 +154,8 @@
 		1AC873E6172C793F00330CBA /* CFNormalRouterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFNormalRouterViewController.m; sourceTree = "<group>"; };
 		1AC873E8172C797500330CBA /* CFTempRouterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTempRouterViewController.h; sourceTree = "<group>"; };
 		1AC873E9172C797600330CBA /* CFTempRouterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFTempRouterViewController.m; sourceTree = "<group>"; };
+		1AC873EB172C7BE500330CBA /* CFReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFReportViewController.h; sourceTree = "<group>"; };
+		1AC873EC172C7BE500330CBA /* CFReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFReportViewController.m; sourceTree = "<group>"; };
 		1AD434F31728DAEE00BA2BAC /* CFRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRouter.h; sourceTree = "<group>"; };
 		1AD434F41728DAEE00BA2BAC /* CFRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRouter.m; sourceTree = "<group>"; };
 		1AD434F61728E54300BA2BAC /* CFFeedNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFFeedNews.h; sourceTree = "<group>"; };
@@ -404,6 +407,8 @@
 			children = (
 				1AC873D2172C54AE00330CBA /* CFRightViewController.h */,
 				1A36E8061727B386003DE0C9 /* CFRightViewController.m */,
+				1AC873EB172C7BE500330CBA /* CFReportViewController.h */,
+				1AC873EC172C7BE500330CBA /* CFReportViewController.m */,
 			);
 			name = RightMenu;
 			sourceTree = "<group>";
@@ -508,6 +513,7 @@
 				1AC873E4172C5A8700330CBA /* CFVehicleViewController.m in Sources */,
 				1AC873E7172C794000330CBA /* CFNormalRouterViewController.m in Sources */,
 				1AC873EA172C797600330CBA /* CFTempRouterViewController.m in Sources */,
+				1AC873ED172C7BE500330CBA /* CFReportViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
