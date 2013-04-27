@@ -71,7 +71,6 @@
 		1A36E8021727B386003DE0C9 /* CFMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFMainViewController.m; sourceTree = "<group>"; };
 		1A36E8031727B386003DE0C9 /* CFPersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFPersonalInfoViewController.h; sourceTree = "<group>"; };
 		1A36E8041727B386003DE0C9 /* CFPersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFPersonalInfoViewController.m; sourceTree = "<group>"; };
-		1A36E8051727B386003DE0C9 /* CFRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRightViewController.h; sourceTree = "<group>"; };
 		1A36E8061727B386003DE0C9 /* CFRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRightViewController.m; sourceTree = "<group>"; };
 		1A36E8071727B386003DE0C9 /* CFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRootViewController.h; sourceTree = "<group>"; };
 		1A36E8081727B386003DE0C9 /* CFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRootViewController.m; sourceTree = "<group>"; };
@@ -138,6 +137,7 @@
 		1AC873CC172BBB4900330CBA /* CFGuest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFGuest.m; sourceTree = "<group>"; };
 		1AC873CE172BBBF500330CBA /* CFDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDriver.h; sourceTree = "<group>"; };
 		1AC873CF172BBBF500330CBA /* CFDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDriver.m; sourceTree = "<group>"; };
+		1AC873D2172C54AE00330CBA /* CFRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRightViewController.h; sourceTree = "<group>"; };
 		1AD434F31728DAEE00BA2BAC /* CFRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRouter.h; sourceTree = "<group>"; };
 		1AD434F41728DAEE00BA2BAC /* CFRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRouter.m; sourceTree = "<group>"; };
 		1AD434F61728E54300BA2BAC /* CFFeedNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFFeedNews.h; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 				1A36E8021727B386003DE0C9 /* CFMainViewController.m */,
 				1A36E8031727B386003DE0C9 /* CFPersonalInfoViewController.h */,
 				1A36E8041727B386003DE0C9 /* CFPersonalInfoViewController.m */,
-				1A36E8051727B386003DE0C9 /* CFRightViewController.h */,
+				1AC873D2172C54AE00330CBA /* CFRightViewController.h */,
 				1A36E8061727B386003DE0C9 /* CFRightViewController.m */,
 				1A36E8071727B386003DE0C9 /* CFRootViewController.h */,
 				1A36E8081727B386003DE0C9 /* CFRootViewController.m */,

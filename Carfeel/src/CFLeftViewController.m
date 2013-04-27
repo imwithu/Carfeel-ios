@@ -12,8 +12,8 @@
 
 @interface CFLeftViewController () <IIViewDeckControllerDelegate>
 
-@property (nonatomic,strong) UISwitch *driverSwitch;
-@property (nonatomic,strong) UISwitch *muteSwitch;
+@property (nonatomic,strong) IBOutlet UISwitch *driverSwitch;
+@property (nonatomic,strong) IBOutlet UISwitch *muteSwitch;
 
 @end
 
@@ -127,10 +127,10 @@
                 }
                 break;
             case 1:
-                //Set section header/footer here
                 switch (indexPath.row) {
                     case 0:
                     {
+                        //开启或者关闭驾驶模式。开始驾驶模式时，自动启动语音播报
                         cell.textLabel.text = @"驾驶模式";
                         cell.selectionStyle = UITableViewCellSelectionStyleNone;
                         if (!self.driverSwitch) {
@@ -267,20 +267,48 @@
             break;
         case 2:
         {
-            UINavigationController *pivc = [self.storyboard instantiateViewControllerWithIdentifier:@"FriendListNavigationController"];
-            self.viewDeckController.centerController = pivc;
-            
+            self.viewDeckController.centerController = [self.storyboard instantiateViewControllerWithIdentifier:@"FriendListNavigationController"];
             [self.viewDeckController toggleLeftViewAnimated:YES];
         }
             break;
         case 3:
+        {
+            switch (indexPath.row) {
+                case 0:
+                    self.viewDeckController.centerController = [self.storyboard instantiateViewControllerWithIdentifier:@"BaseInformationNavigationController"];
+                    break;
+                case 1:
+                    self.viewDeckController.centerController = [self.storyboard instantiateViewControllerWithIdentifier:@"ContactNavigationController"];
+                    break;
+                case 2:
+                    self.viewDeckController.centerController = [self.storyboard instantiateViewControllerWithIdentifier:@"IdentifierNavigationController"];
+                    break;
+                case 3:
+                    self.viewDeckController.centerController = [self.storyboard instantiateViewControllerWithIdentifier:@"VehicleNavigationController"];
+                    break;
+                default:
+                    break;
+            }
+            [self.viewDeckController toggleLeftViewAnimated:YES];
+        }
             break;
         case 4:
+        {
+            switch (indexPath.row) {
+                case 0:
+                    self.viewDeckController.centerController = [self.storyboard instantiateViewControllerWithIdentifier:@"NormalRouterNavigationController"];
+                    break;
+                case 1:
+                    self.viewDeckController.centerController = [self.storyboard instantiateViewControllerWithIdentifier:@"TempRouterNavigationController"];
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
             break;
         default:
             break;
-    }
-    if (indexPath.section == 1) {
     }
 }
 
