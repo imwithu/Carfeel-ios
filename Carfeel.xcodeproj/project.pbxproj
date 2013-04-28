@@ -32,6 +32,8 @@
 		1A36E8471727B992003DE0C9 /* CFUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A36E8461727B992003DE0C9 /* CFUtil.m */; };
 		1A36E84A1727BAA5003DE0C9 /* CFSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A36E8491727BAA5003DE0C9 /* CFSocial.m */; };
 		1A36E84D1727C0B4003DE0C9 /* CFRoutePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A36E84C1727C0B4003DE0C9 /* CFRoutePoint.m */; };
+		1ABC8CC1172C971000023975 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC8CBE172C971000023975 /* MJPopupBackgroundView.m */; };
+		1ABC8CC2172C971000023975 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC8CC0172C971000023975 /* UIViewController+MJPopupViewController.m */; };
 		1AC873B8172BAC1A00330CBA /* CFAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873B7172BAC1A00330CBA /* CFAddress.m */; };
 		1AC873BB172BACFB00330CBA /* CFContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873BA172BACFB00330CBA /* CFContact.m */; };
 		1AC873BE172BADE000330CBA /* CFBaseInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873BD172BADE000330CBA /* CFBaseInformation.m */; };
@@ -123,6 +125,10 @@
 		1A36E8491727BAA5003DE0C9 /* CFSocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSocial.m; sourceTree = "<group>"; };
 		1A36E84B1727C0B4003DE0C9 /* CFRoutePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRoutePoint.h; sourceTree = "<group>"; };
 		1A36E84C1727C0B4003DE0C9 /* CFRoutePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRoutePoint.m; sourceTree = "<group>"; };
+		1ABC8CBD172C971000023975 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
+		1ABC8CBE172C971000023975 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
+		1ABC8CBF172C971000023975 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		1ABC8CC0172C971000023975 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
 		1AC873B6172BAC1A00330CBA /* CFAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFAddress.h; sourceTree = "<group>"; };
 		1AC873B7172BAC1A00330CBA /* CFAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFAddress.m; sourceTree = "<group>"; };
 		1AC873B9172BACFB00330CBA /* CFContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFContact.h; sourceTree = "<group>"; };
@@ -253,6 +259,7 @@
 		1A36E8111727B396003DE0C9 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				1ABC8CBC172C971000023975 /* PopView */,
 				1A36E8441727B971003DE0C9 /* CFlibrary */,
 				1A36E8121727B396003DE0C9 /* BaiduMap */,
 				1A36E8341727B396003DE0C9 /* ViewDeck */,
@@ -366,6 +373,17 @@
 				1AC873CF172BBBF500330CBA /* CFDriver.m */,
 			);
 			path = CFlibrary;
+			sourceTree = "<group>";
+		};
+		1ABC8CBC172C971000023975 /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				1ABC8CBD172C971000023975 /* MJPopupBackgroundView.h */,
+				1ABC8CBE172C971000023975 /* MJPopupBackgroundView.m */,
+				1ABC8CBF172C971000023975 /* UIViewController+MJPopupViewController.h */,
+				1ABC8CC0172C971000023975 /* UIViewController+MJPopupViewController.m */,
+			);
+			path = PopView;
 			sourceTree = "<group>";
 		};
 		1AC873D6172C561700330CBA /* LeftMenu */ = {
@@ -514,6 +532,8 @@
 				1AC873E7172C794000330CBA /* CFNormalRouterViewController.m in Sources */,
 				1AC873EA172C797600330CBA /* CFTempRouterViewController.m in Sources */,
 				1AC873ED172C7BE500330CBA /* CFReportViewController.m in Sources */,
+				1ABC8CC1172C971000023975 /* MJPopupBackgroundView.m in Sources */,
+				1ABC8CC2172C971000023975 /* UIViewController+MJPopupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

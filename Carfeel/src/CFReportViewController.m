@@ -8,6 +8,7 @@
 
 #import "CFReportViewController.h"
 #import "IIViewDeckController.h"
+#import "UIViewController+MJPopupViewController.h"
 
 @interface CFReportViewController ()
 

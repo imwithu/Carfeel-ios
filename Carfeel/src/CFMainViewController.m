@@ -8,6 +8,8 @@
 
 #import "CFMainViewController.h"
 #import "IIViewDeckController.h"
+#import "UIViewController+MJPopupViewController.h"
+#import "CFReportViewController.h"
 #import "BMapKit.h"
 
 @interface CFMainViewController ()
@@ -37,7 +39,7 @@
     btn.frame = btnRect;
     btn.tag = 1;
     [btn setTitle:@"R" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(switchView:) forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:self action:@selector(popView:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
 }
@@ -53,13 +55,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)switchView:(UIButton *)sender {
-    if (sender.tag) {
-        [self.viewDeckController openRightView];
-    }else {
-        [self.viewDeckController openLeftView];
-    }
+- (IBAction)switchView:(UIButton *)sender
+{
+    [self.viewDeckController openLeftView];
 }
 
+- (IBAction)popView:(UIButton *)sender
+{
+    CFReportViewController *reportViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ReportViewController"];
+    CGRect frame = CGRectMake(0.f, 0.f, 276.f, 276.f);
+    reportViewController.view.frame = frame;
+    
+    
+    [self presentPopupViewController:reportViewController animationType:MJPopupViewAnimationSlideRightRight];
+}
 
 @end

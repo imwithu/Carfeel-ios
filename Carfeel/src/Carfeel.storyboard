@@ -158,27 +158,153 @@
             </objects>
             <point key="canvasLocation" x="-2141" y="4332"/>
         </scene>
-        <!--View Controller-->
+        <!--Report View Controller-->
         <scene sceneID="hoI-JB-K0J">
             <objects>
-                <viewController storyboardIdentifier="ReportViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xpS-vc-RTI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReportViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xpS-vc-RTI" customClass="CFReportViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="ReportViewController" id="EyX-pn-jBL">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78K-jw-m5C">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="QCb-6X-xd9" kind="embed" id="M5z-Ov-Kol"/>
-                                </connections>
-                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVw-dS-pFT">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Nyu-YG-0m6"/>
+                                    <constraint firstAttribute="width" constant="80" id="zvH-zl-Qib"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="拥堵">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O7-a0-5gn">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="ROB-l3-gk2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="警察">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOD-Pu-JmV">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="hvH-26-JEY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="事故">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBv-tU-gih">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="qc3-lh-rUg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="管制">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlV-cG-Z22">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="施工">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8b-ko-f4U">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="趣闻">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPI-fa-Dxq">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="爆料">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbW-JP-UCb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="0QC-WG-mgY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uX-8c-466">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="78K-jw-m5C" firstAttribute="top" secondItem="EyX-pn-jBL" secondAttribute="top" constant="107" id="AxO-A9-fXm"/>
-                            <constraint firstAttribute="trailing" secondItem="78K-jw-m5C" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VGs-Ii-KoG"/>
-                            <constraint firstAttribute="bottom" secondItem="78K-jw-m5C" secondAttribute="bottom" constant="108" id="bA9-tb-hLH"/>
-                            <constraint firstItem="78K-jw-m5C" firstAttribute="leading" secondItem="EyX-pn-jBL" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bby-fv-Cgx"/>
+                            <constraint firstItem="DBv-tU-gih" firstAttribute="top" secondItem="EyX-pn-jBL" secondAttribute="top" constant="98" id="4zM-uz-zEQ"/>
+                            <constraint firstItem="zbW-JP-UCb" firstAttribute="leading" secondItem="NlV-cG-Z22" secondAttribute="leading" type="default" id="E4O-l8-asD"/>
+                            <constraint firstItem="NlV-cG-Z22" firstAttribute="top" secondItem="0O7-a0-5gn" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="F6t-PF-Kmx"/>
+                            <constraint firstItem="DBv-tU-gih" firstAttribute="leading" secondItem="pVw-dS-pFT" secondAttribute="leading" type="default" id="GdN-Do-eLf"/>
+                            <constraint firstItem="zbW-JP-UCb" firstAttribute="top" secondItem="NlV-cG-Z22" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HRJ-cL-dtw"/>
+                            <constraint firstItem="U8b-ko-f4U" firstAttribute="top" secondItem="nOD-Pu-JmV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HSa-3g-kbH"/>
+                            <constraint firstItem="zbW-JP-UCb" firstAttribute="bottom" secondItem="8uX-8c-466" secondAttribute="bottom" type="default" id="JDJ-U4-CPC"/>
+                            <constraint firstItem="NlV-cG-Z22" firstAttribute="top" secondItem="DBv-tU-gih" secondAttribute="top" type="default" id="Kz1-E2-JL3"/>
+                            <constraint firstItem="zbW-JP-UCb" firstAttribute="leading" secondItem="pPI-fa-Dxq" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Lqq-Z0-YAY"/>
+                            <constraint firstItem="U8b-ko-f4U" firstAttribute="leading" secondItem="NlV-cG-Z22" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="THv-NI-6nk"/>
+                            <constraint firstItem="pPI-fa-Dxq" firstAttribute="leading" secondItem="DBv-tU-gih" secondAttribute="leading" type="default" id="UvK-UJ-yhU"/>
+                            <constraint firstItem="zbW-JP-UCb" firstAttribute="bottom" secondItem="pPI-fa-Dxq" secondAttribute="bottom" type="default" id="Vc8-De-vc4"/>
+                            <constraint firstItem="NlV-cG-Z22" firstAttribute="centerY" secondItem="DBv-tU-gih" secondAttribute="centerY" type="default" id="XJc-t3-Ld6"/>
+                            <constraint firstItem="nOD-Pu-JmV" firstAttribute="leading" secondItem="0O7-a0-5gn" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="YZ7-NS-E2h"/>
+                            <constraint firstItem="U8b-ko-f4U" firstAttribute="leading" secondItem="nOD-Pu-JmV" secondAttribute="leading" type="default" id="anj-qL-6Wl"/>
+                            <constraint firstItem="0O7-a0-5gn" firstAttribute="leading" secondItem="pVw-dS-pFT" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="cOc-Gq-L6f"/>
+                            <constraint firstItem="0O7-a0-5gn" firstAttribute="top" secondItem="pVw-dS-pFT" secondAttribute="top" type="default" id="czB-Xl-ZtP"/>
+                            <constraint firstItem="U8b-ko-f4U" firstAttribute="baseline" secondItem="NlV-cG-Z22" secondAttribute="baseline" type="default" id="f74-2g-IcZ"/>
+                            <constraint firstItem="DBv-tU-gih" firstAttribute="top" secondItem="pVw-dS-pFT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nYs-kR-Dd3"/>
+                            <constraint firstItem="8uX-8c-466" firstAttribute="baseline" secondItem="zbW-JP-UCb" secondAttribute="baseline" type="default" id="oN5-5a-USt"/>
+                            <constraint firstItem="8uX-8c-466" firstAttribute="trailing" secondItem="U8b-ko-f4U" secondAttribute="trailing" type="default" id="pYI-XR-q65"/>
+                            <constraint firstItem="nOD-Pu-JmV" firstAttribute="top" secondItem="0O7-a0-5gn" secondAttribute="top" type="default" id="qpI-G7-YYe"/>
+                            <constraint firstItem="NlV-cG-Z22" firstAttribute="leading" secondItem="0O7-a0-5gn" secondAttribute="leading" type="default" id="qv1-S0-I2F"/>
+                            <constraint firstItem="8uX-8c-466" firstAttribute="leading" secondItem="U8b-ko-f4U" secondAttribute="leading" type="default" id="tSF-X3-Srt"/>
+                            <constraint firstItem="pPI-fa-Dxq" firstAttribute="top" secondItem="DBv-tU-gih" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="v1K-g9-ZTr"/>
+                            <constraint firstItem="U8b-ko-f4U" firstAttribute="trailing" secondItem="nOD-Pu-JmV" secondAttribute="trailing" type="default" id="wgl-Iv-Lc0"/>
+                            <constraint firstItem="8uX-8c-466" firstAttribute="top" secondItem="U8b-ko-f4U" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xg5-vl-wcR"/>
+                            <constraint firstItem="8uX-8c-466" firstAttribute="leading" secondItem="zbW-JP-UCb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="xkv-Dm-dhw"/>
+                            <constraint firstItem="NlV-cG-Z22" firstAttribute="leading" secondItem="DBv-tU-gih" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="yaa-tx-vdP"/>
+                            <constraint firstItem="pPI-fa-Dxq" firstAttribute="leading" secondItem="EyX-pn-jBL" secondAttribute="leading" constant="10" id="yj4-PW-egx"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -703,21 +829,6 @@
             </objects>
             <point key="canvasLocation" x="-1285" y="-346"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="h5r-kA-XaY">
-            <objects>
-                <viewController id="QCb-6X-xd9" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oJw-uP-fBa">
-                        <rect key="frame" x="0.0" y="0.0" width="280" height="245"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="psT-yP-fOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-996" y="4444"/>
-        </scene>
     </scenes>
     <classes>
         <class className="CFBaseInformationViewController" superclassName="UITableViewController">
@@ -742,6 +853,7 @@
         <class className="CFMainViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CFMainViewController.h"/>
             <relationships>
+                <relationship kind="action" name="popView:" candidateClass="UIButton"/>
                 <relationship kind="action" name="switchView:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="switchLeft" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="switchRight" candidateClass="UIButton"/>
@@ -749,6 +861,9 @@
         </class>
         <class className="CFNormalRouterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CFNormalRouterViewController.h"/>
+        </class>
+        <class className="CFReportViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CFReportViewController.h"/>
         </class>
         <class className="CFRightViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CFRightViewController.h"/>
