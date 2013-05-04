@@ -42,10 +42,11 @@
     NSLog(@"create 3 views");
     CFMainViewController *mainController = [storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
     CFLeftViewController *leftController = [storyboard instantiateViewControllerWithIdentifier:@"LeftViewController"];
-    CFRightViewController *rightController = [storyboard instantiateViewControllerWithIdentifier:@"RightViewController"];
+//    CFRightViewController *rightController = [storyboard instantiateViewControllerWithIdentifier:@"RightViewController"];
 
     NSLog(@"create viewDeckController");
-    self = [super initWithCenterViewController:mainController leftViewController:leftController rightViewController:rightController];
+//    self = [super initWithCenterViewController:mainController leftViewController:leftController rightViewController:rightController];
+    self = [super initWithCenterViewController:mainController leftViewController:leftController];
     if (self) {
         NSLog(@"set viewDeckController's proprity");
         self.panningMode = IIViewDeckNoPanning;

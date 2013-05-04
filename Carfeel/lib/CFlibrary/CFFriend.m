@@ -10,4 +10,12 @@
 
 @implementation CFFriend
 
+- (CFFriend *)init
+{
+    self = [super init];
+    self.friendStatusString = [[NSArray alloc] initWithObjects:@"Offlie", @"Driving", @"Riding", nil];
+    
+    return self;
+}
+
 @end

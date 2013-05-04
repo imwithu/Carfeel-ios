@@ -7,12 +7,20 @@
 //
 
 #import "CFFriendListViewController.h"
+#import "CFFriendDetailViewController.h"
 #import "IIViewDeckController.h"
+#import "CFFriend.h"
 
-@interface CFFriendListViewController () <IIViewDeckControllerDelegate>
+@interface CFFriendListViewController () <IIViewDeckControllerDelegate, UITableViewDelegate, UISearchDisplayDelegate>
 
 @property (nonatomic, strong) NSMutableArray *onlineFriends;
 @property (nonatomic, strong) NSMutableArray *offlineFriends;
+@property (nonatomic, copy) NSDictionary *editedSelection;
+
+@property (nonatomic, strong) NSMutableArray *filteredFriends;
+@property (nonatomic, copy) NSString *savedSearchTerm;
+@property (nonatomic) BOOL searchWasActive;
+//@property (nonatomic, strong) UISearchDisplayController *searchController;
 
 @end
 
@@ -38,8 +46,39 @@
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     // set back button
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self.viewDeckController action:@selector(toggleLeftView)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleBordered target:self.viewDeckController action:@selector(toggleLeftView)];
     [self getFriendListFromRemote];
+    
+    self.title = @"我的好友";
+    
+    self.filteredFriends = [NSMutableArray arrayWithCapacity:([self.onlineFriends count]+[self.offlineFriends count])];
+  
+    if (self.savedSearchTerm) {
+        [self.searchDisplayController setActive:self.searchWasActive];
+        [self.searchDisplayController.searchBar setText:self.savedSearchTerm];
+        
+        self.savedSearchTerm = nil;
+    }
+    [self.tableView reloadData];
+    self.tableView.scrollEnabled = YES;
+    /*
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    self.tableView.tableHeaderView = searchBar;
+    self.searchController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
+    self.searchController.delegate = self;
+    self.searchController.searchResultsDataSource = self;
+*/
+}
+
+- (void)viewDidUnload
+{
+    self.filteredFriends = nil;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.searchWasActive = [self.searchDisplayController isActive];
+    self.savedSearchTerm = [self.searchDisplayController.searchBar text];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,90 +93,101 @@
 {
     if (!self.onlineFriends) {
         self.onlineFriends = [[NSMutableArray alloc] init];
-    }    
-    NSDictionary *friend = @{@"Name":@"Jerry", @"Status":@"Online"};
-    [self.onlineFriends addObject:friend];
-    friend = @{@"Name":@"xPhone", @"Status":@"Online"};
-    [self.onlineFriends addObject:friend];
-
-    
+    }
     if (!self.offlineFriends) {
         self.offlineFriends = [[NSMutableArray alloc] init];
     }
-    friend = @{@"Name":@"Zhang", @"Status":@"Offline"};
-    [self.offlineFriends addObject:friend];
-    friend = @{@"Name":@"Li", @"Status":@"Offline"};
-    [self.offlineFriends addObject:friend];
+    // send request
+    // get result
+    
+    int friendNumber = 20;
+    CFFriend *friend;
 
+    for (int i=0; i < friendNumber; i++) {
+        friend = [[CFFriend alloc] init];
+        friend.friendStatus = i % 3;
+        friend.friendID = i;
+        friend.displayName = [NSString stringWithFormat:@"username-%d", i];
+        friend.commentName = [NSString stringWithFormat:@"nickname-%d", i];
+        friend.following = YES;
+        friend.follower = YES;
+        if (friend.friendStatus == CFFriendStatusOffline) {
+            [self.offlineFriends addObject:friend];
+        } else {
+             [self.onlineFriends addObject:friend];
+        }
+    }
 }
 
+
+- (void)setEditedSelection: (NSDictionary *)dict
+{
+    if (![dict isEqual:self.editedSelection]){
+        _editedSelection = dict;
+        NSIndexPath *indexPath = dict[@"indexPath"];
+        id newValue = dict[@"object"];
+        if (indexPath.section == 0)
+            [self.onlineFriends replaceObjectAtIndex:indexPath.row withObject:newValue];
+        else
+            [self.offlineFriends replaceObjectAtIndex:indexPath.row withObject:newValue];
+        [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 2;
+    if (tableView ==  self.searchDisplayController.searchResultsTableView)
+        return 1;
+    else
+        return 2;
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if (section == 0) {
-        NSLog(@"%d", [self.onlineFriends count]);
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+        return [self.filteredFriends count];
+    
+    if (section == 0)
         return [self.onlineFriends count];
-    } else {
-        NSLog(@"%d", [self.offlineFriends count]);
+    else
         return [self.offlineFriends count];
-    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    NSString *title =nil;
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+        return nil;
     
-    switch (section) {
-        case 0:
-            title = @"在线好友";
-            break;
-        case 1:
-            title = @"离线好友";
-            break;
-        default:
-            break;
-    }
-    
-    return title;
+    if (section == 0)
+        return @"在线好友";
+    else
+        return @"离线好友";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Friend";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        NSLog(@"cell == nil");
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    NSLog(@"%@", indexPath);
-    switch (indexPath.section) {
-        case 0:
-        {
-            NSDictionary *friend = [self.onlineFriends objectAtIndex:indexPath.row];
-            NSLog(@"%@",friend);
-            cell.textLabel.text = [friend objectForKey:@"Name"];
-            cell.detailTextLabel.text = [friend objectForKey:@"Status"];
-        }
-            break;
-        case 1:
-        {
-            NSDictionary *friend = [self.offlineFriends objectAtIndex:indexPath.row];
-            cell.textLabel.text = [friend objectForKey:@"Name"];
-            cell.detailTextLabel.text = [friend objectForKey:@"Status"];
-        }
-            
-            break;
-        default:
-            break;
-    }
+    
+    
+    CFFriend *friend = nil;
+    if (tableView == self.searchDisplayController.searchResultsTableView) 
+        friend = [self.filteredFriends objectAtIndex:indexPath.row];
+    else if (indexPath.section == 0) 
+        friend = [self.onlineFriends objectAtIndex:indexPath.row];
+    else
+        friend = [self.offlineFriends objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = friend.commentName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@" , friend.displayName, (friend.friendStatus==CFFriendStatusOffline)? @"Offline" : (friend.friendStatus == CFFriendStatusDriving) ? @"Driving":@"Riding"];
     
     return cell;
 }
@@ -182,16 +232,77 @@
 */
 
 #pragma mark - Table view delegate
+// storyboard segue 的方法
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *destination = segue.destinationViewController;
+    if ([destination respondsToSelector:@selector(setDelegate:)]){
+        [destination setValue:self forKey:@"delegate"];
+    }
+    if ([destination respondsToSelector:@selector(setSelection:)]) {
+        NSIndexPath *indexPath =[self.tableView indexPathForCell:sender];
+        id object = nil;
+        if (indexPath.section == 0)
+            object = self.onlineFriends[indexPath.row];
+        else
+            object = self.offlineFriends[indexPath.row];
+        NSDictionary *selection = @{@"indexPath":indexPath,@"object":object};
+        
+        [destination setValue:selection forKey:@"selection"];
+    }
+}
 
+// 直接写代码的方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    
+    if (tableView != self.searchDisplayController.searchResultsTableView) {
+        return;
+    }
+    
+    CFFriendDetailViewController *detailViewController = [[CFFriendDetailViewController alloc] init];
+    detailViewController.selection = @{@"indexPath":indexPath, @"object":self.filteredFriends[indexPath.row]};
+                                
+    NSLog(@"%@",[self.filteredFriends[indexPath.row] displayName]);
      // ...
      // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    [[self navigationController] pushViewController:detailViewController animated:YES];
+
+}
+
+
+
+#pragma mark -
+#pragma mark Content filtering
+
+- (void)filterContentForSearchText:(NSString *)searchText
+{
+    [self.filteredFriends removeAllObjects];
+    
+    for (CFFriend *friend in self.onlineFriends) {
+        NSComparisonResult result1 = [friend.displayName compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+        NSComparisonResult result2 = [friend.commentName compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+        if (result1 == NSOrderedSame || result2 == NSOrderedSame) {
+            [self.filteredFriends addObject:friend];
+        }
+    }
+    for (CFFriend *friend in self.offlineFriends) {
+        NSComparisonResult result1 = [friend.displayName compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+        NSComparisonResult result2 = [friend.commentName compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+        if (result1 == NSOrderedSame || result2 == NSOrderedSame) {
+            [self.filteredFriends addObject:friend];
+        }
+    }
+}
+
+
+#pragma mark -
+#pragma mark UISearchDisplayController Delegate Methods
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString];
+    return YES;
 }
 
 @end

@@ -34,6 +34,7 @@
 		1A36E84D1727C0B4003DE0C9 /* CFRoutePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A36E84C1727C0B4003DE0C9 /* CFRoutePoint.m */; };
 		1ABC8CC1172C971000023975 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC8CBE172C971000023975 /* MJPopupBackgroundView.m */; };
 		1ABC8CC2172C971000023975 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC8CC0172C971000023975 /* UIViewController+MJPopupViewController.m */; };
+		1ABC8CC5172D04FB00023975 /* CFFriendDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC8CC4172D04FB00023975 /* CFFriendDetailViewController.m */; };
 		1AC873B8172BAC1A00330CBA /* CFAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873B7172BAC1A00330CBA /* CFAddress.m */; };
 		1AC873BB172BACFB00330CBA /* CFContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873BA172BACFB00330CBA /* CFContact.m */; };
 		1AC873BE172BADE000330CBA /* CFBaseInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC873BD172BADE000330CBA /* CFBaseInformation.m */; };
@@ -129,6 +130,8 @@
 		1ABC8CBE172C971000023975 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
 		1ABC8CBF172C971000023975 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
 		1ABC8CC0172C971000023975 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
+		1ABC8CC3172D04FA00023975 /* CFFriendDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFFriendDetailViewController.h; sourceTree = "<group>"; };
+		1ABC8CC4172D04FB00023975 /* CFFriendDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFFriendDetailViewController.m; sourceTree = "<group>"; };
 		1AC873B6172BAC1A00330CBA /* CFAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFAddress.h; sourceTree = "<group>"; };
 		1AC873B7172BAC1A00330CBA /* CFAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFAddress.m; sourceTree = "<group>"; };
 		1AC873B9172BACFB00330CBA /* CFContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFContact.h; sourceTree = "<group>"; };
@@ -393,6 +396,8 @@
 				1A36E8001727B386003DE0C9 /* CFLeftViewController.m */,
 				1A36E7FD1727B386003DE0C9 /* CFFriendListViewController.h */,
 				1A36E7FE1727B386003DE0C9 /* CFFriendListViewController.m */,
+				1ABC8CC3172D04FA00023975 /* CFFriendDetailViewController.h */,
+				1ABC8CC4172D04FB00023975 /* CFFriendDetailViewController.m */,
 				1AC873D9172C579000330CBA /* CFBaseInformationViewController.h */,
 				1AC873DA172C579000330CBA /* CFBaseInformationViewController.m */,
 				1AC873DC172C59EF00330CBA /* CFContactViewController.h */,
@@ -534,6 +539,7 @@
 				1AC873ED172C7BE500330CBA /* CFReportViewController.m in Sources */,
 				1ABC8CC1172C971000023975 /* MJPopupBackgroundView.m in Sources */,
 				1ABC8CC2172C971000023975 /* UIViewController+MJPopupViewController.m in Sources */,
+				1ABC8CC5172D04FB00023975 /* CFFriendDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +621,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Carfeel/Carfeel-Prefix.pch";
 				INFOPLIST_FILE = "Carfeel/Carfeel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Carfeel/lib/baiduMap/lib\"",
@@ -630,6 +637,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Carfeel/Carfeel-Prefix.pch";
 				INFOPLIST_FILE = "Carfeel/Carfeel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Carfeel/lib/baiduMap/lib\"",

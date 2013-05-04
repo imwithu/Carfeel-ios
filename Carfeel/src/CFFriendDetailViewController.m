@@ -1,19 +1,20 @@
 //
-//  CFVehicleViewController.m
+//  CFFriendDetailViewController.m
 //  Carfeel
 //
-//  Created by James Yu on 4/27/13.
+//  Created by James Yu on 4/28/13.
 //  Copyright (c) 2013 Jianqiang Yu. All rights reserved.
 //
 
-#import "CFVehicleViewController.h"
-#import "IIViewDeckController.h"
+#import "CFFriendDetailViewController.h"
 
-@interface CFVehicleViewController ()
+@interface CFFriendDetailViewController ()
+
+@property (nonatomic, strong) CFFriend *friendDetail;
 
 @end
 
-@implementation CFVehicleViewController
+@implementation CFFriendDetailViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,18 +30,38 @@
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
+    // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleBordered target:self.viewDeckController action:@selector(toggleLeftView)];
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.friendDetail = self.selection[@"object"];
 
+    [self.navigationItem setTitle:self.friendDetail.commentName];
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+
+    // 设置需要返回的值，例如修改了好友的备注
+    if ([self.delegate respondsToSelector:@selector(setEditedSelection:)]) {
+        NSIndexPath *indexPath = self.selection[@"indexPath"];
+        NSDictionary *editedSelection = @{@"indexPath": indexPath, @"object" : self.friendDetail};
+        [self.delegate setValue:editedSelection forKey:@"editedSelection"];
+    }
 }
 
 #pragma mark - Table view data source
@@ -54,16 +75,28 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    NSString *CellIdentifier = [NSString stringWithFormat:@"FriendDetail"];
+    NSLog(@"%@",CellIdentifier);
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            cell.textLabel.text = self.friendDetail.commentName;
+        } else if (indexPath.row == 1) {
+            cell.textLabel.text = self.friendDetail.displayName;
+        } else if (indexPath.row == 2) {
+            cell.textLabel.text = [self.friendDetail.friendStatusString objectAtIndex:self.friendDetail.friendStatus];
+        }
+    }
+    NSLog(@"cell text = %@", cell.textLabel.text);
     return cell;
 }
 

@@ -18,11 +18,14 @@ typedef UInt32 CFFriendStatus;
 
 @interface CFFriend : NSObject
 
-@property (nonatomic, readwrite)CFUID friendID;
+@property (nonatomic) CFUID friendID;
+@property (nonatomic, strong) NSString *displayName;
+@property (nonatomic, strong) NSString *commentName;
 @property (nonatomic) BOOL following; // 你是否关注了他，这个在查看哪些人关注了你的时候，可以知道是否相互关注。
 @property (nonatomic) BOOL follower; // 他是否也关注你，这个可以列出关注该用户的所有人
 @property (nonatomic) CFFriendStatus friendStatus;
 
+@property (nonatomic, strong) NSArray *friendStatusString;
 
 
 @end
